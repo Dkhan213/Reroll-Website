@@ -1,0 +1,37 @@
+com/character/creator/CharacterCreator.java
+ com.character.creator.CharacterCreator
+com/character/creator/PhysicalAttributes/EyeColor.java
+ com.character.creator.PhysicalAttributes.EyeColor
+com/character/creator/PhysicalAttributes/HairStyle.java
+ com.character.creator.PhysicalAttributes.HairStyle
+com/character/creator/PhysicalAttributes/Hair.java
+ com.character.creator.PhysicalAttributes.Hair
+com/character/creator/PhysicalAttributes/Gender.java
+ com.character.creator.PhysicalAttributes.Gender
+com/character/creator/BackgroundAttributes/Alignment.java
+ com.character.creator.BackgroundAttributes.Alignment
+com/character/creator/PhysicalAttributes/Race.java
+ com.character.creator.PhysicalAttributes.Race
+ com.character.creator.PhysicalAttributes.Race$1
+com/character/creator/BackgroundAttributes/Flaws.java
+ com.character.creator.BackgroundAttributes.Flaws
+com/character/creator/PhysicalAttributes/HairColor.java
+ com.character.creator.PhysicalAttributes.HairColor
+com/character/creator/BackgroundAttributes/Talents.java
+ com.character.creator.BackgroundAttributes.Talents
+com/character/creator/PhysicalAttributes/SkinColor.java
+ com.character.creator.PhysicalAttributes.SkinColor
+com/character/creator/PhysicalAttributes/Name.java
+ com.character.creator.PhysicalAttributes.Name
+dynamodb/DynamoDbClientProvider.java
+ dynamodb.DynamoDbClientProvider
+com/character/creator/BackgroundAttributes/FamilyHistory.java
+ com.character.creator.BackgroundAttributes.FamilyHistory
+com/character/creator/PhysicalAttributes/PhysicalAttribute.java
+ com.character.creator.PhysicalAttributes.PhysicalAttribute
+ com.character.creator.PhysicalAttributes.PhysicalAttribute$PhysicalAttributeBuilder
+com/character/creator/BackgroundAttributes/BackgroundAttribute.java
+ com.character.creator.BackgroundAttributes.BackgroundAttribute
+ com.character.creator.BackgroundAttributes.BackgroundAttribute$BackgroundAttributeBuilder
+com/character/creator/Character.java
+ com.character.creator.Character

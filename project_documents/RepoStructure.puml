@@ -1,0 +1,95 @@
+@startuml
+
+class CharacterDao {
+}
+
+class Character {
+PhysicalAttribute physicalAttribute
+BackgroundAttribute backgroundAttribute
+}
+
+class PhysicalAttribute {
+enum race
+boolean gender
+String skin
+String EyeColor
+Int Age
+}
+
+class Extras {
+}
+
+enum Race {
+}
+
+enum SkinColor {
+}
+
+enum EyeColor {
+}
+
+class GenderAlignedAttributes {
+boolean gender
+Hair hair
+String Name
+String Height
+Int Weight
+}
+
+class Hair {
+enum hairStyle
+enum hairColor
+}
+
+enum HairColor {
+}
+
+enum HairStyle {
+}
+
+class BackgroundAttribute {
+}
+
+class FamilyHistory {
+}
+
+enum Alignment {
+}
+
+class NameDAO{}
+
+class FamilyHistoryDAO{}
+
+class CharacterModel{}
+
+
+
+CharacterDao <-- CharacterModel
+CharacterModel <-- Character
+Character <-- PhysicalAttribute
+PhysicalAttribute <-- Race
+PhysicalAttribute <-- Extras
+PhysicalAttribute <-- GenderAlignedAttributes
+GenderAlignedAttributes <-- Name
+GenderAlignedAttributes <-- Height
+GenderAlignedAttributes <-- Weight
+PhysicalAttribute <-- SkinColor
+PhysicalAttribute <-- EyeColor
+PhysicalAttribute <-- Age
+GenderAlignedAttributes <-- Hair
+Hair <-- HairStyle
+Hair <-- HairColor
+Flaws <-- FlawsDAO
+
+
+
+Character <-- BackgroundAttribute
+BackgroundAttribute <-- FamilyHistory
+BackgroundAttribute <-- Talents
+BackgroundAttribute <-- Flaws
+FamilyHistory <-- FamilyHistoryDAO
+Talents <-- TalentsDAO
+Flaws <-- Alignment
+Name <-- NameDAO
+
+@enduml
