@@ -1,4 +1,4 @@
-package com.character.creator.PhysicalAttributes;
+package com.character.creator.physicalAttributes;
 
 public class Hair {
     HairColor hairColor;
@@ -7,6 +7,12 @@ public class Hair {
     public Hair(HairColor hairColor, HairStyle hairStyle) {
         this.hairColor = hairColor;
         this.hairStyle = hairStyle;
+    }
+
+    @Override
+    public String toString() {
+        return "Hair: " +
+                "Hair Color= " + hairColor.toString() + ", Hair Style = " + hairStyle.toString();
     }
 
     //ToDo: Find an elegant way to get hair based on race and gender

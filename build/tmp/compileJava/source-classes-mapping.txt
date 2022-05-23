@@ -1,37 +1,45 @@
-com/character/creator/CharacterCreator.java
- com.character.creator.CharacterCreator
-com/character/creator/PhysicalAttributes/EyeColor.java
- com.character.creator.PhysicalAttributes.EyeColor
-com/character/creator/PhysicalAttributes/HairStyle.java
- com.character.creator.PhysicalAttributes.HairStyle
-com/character/creator/PhysicalAttributes/Hair.java
- com.character.creator.PhysicalAttributes.Hair
-com/character/creator/PhysicalAttributes/Gender.java
- com.character.creator.PhysicalAttributes.Gender
-com/character/creator/BackgroundAttributes/Alignment.java
- com.character.creator.BackgroundAttributes.Alignment
-com/character/creator/PhysicalAttributes/Race.java
- com.character.creator.PhysicalAttributes.Race
- com.character.creator.PhysicalAttributes.Race$1
-com/character/creator/BackgroundAttributes/Flaws.java
- com.character.creator.BackgroundAttributes.Flaws
-com/character/creator/PhysicalAttributes/HairColor.java
- com.character.creator.PhysicalAttributes.HairColor
-com/character/creator/BackgroundAttributes/Talents.java
- com.character.creator.BackgroundAttributes.Talents
-com/character/creator/PhysicalAttributes/SkinColor.java
- com.character.creator.PhysicalAttributes.SkinColor
-com/character/creator/PhysicalAttributes/Name.java
- com.character.creator.PhysicalAttributes.Name
 dynamodb/DynamoDbClientProvider.java
  dynamodb.DynamoDbClientProvider
-com/character/creator/BackgroundAttributes/FamilyHistory.java
- com.character.creator.BackgroundAttributes.FamilyHistory
-com/character/creator/PhysicalAttributes/PhysicalAttribute.java
- com.character.creator.PhysicalAttributes.PhysicalAttribute
- com.character.creator.PhysicalAttributes.PhysicalAttribute$PhysicalAttributeBuilder
-com/character/creator/BackgroundAttributes/BackgroundAttribute.java
- com.character.creator.BackgroundAttributes.BackgroundAttribute
- com.character.creator.BackgroundAttributes.BackgroundAttribute$BackgroundAttributeBuilder
+com/character/creator/physicalAttributes/Hair.java
+ com.character.creator.physicalAttributes.Hair
+com/character/creator/physicalAttributes/PhysicalAttribute.java
+ com.character.creator.physicalAttributes.PhysicalAttribute
+ com.character.creator.physicalAttributes.PhysicalAttribute$PhysicalAttributeBuilder
+com/character/creator/physicalAttributes/Gender.java
+ com.character.creator.physicalAttributes.Gender
+com/character/creator/dao/FamilyHistoryDao.java
+ com.character.creator.dao.FamilyHistoryDao
+com/character/creator/physicalAttributes/EyeColor.java
+ com.character.creator.physicalAttributes.EyeColor
+com/character/creator/physicalAttributes/HairStyle.java
+ com.character.creator.physicalAttributes.HairStyle
+com/character/creator/physicalAttributes/HairColor.java
+ com.character.creator.physicalAttributes.HairColor
+com/character/creator/physicalAttributes/SkinColor.java
+ com.character.creator.physicalAttributes.SkinColor
+com/character/creator/physicalAttributes/Name.java
+ com.character.creator.physicalAttributes.Name
+com/character/creator/physicalAttributes/Race.java
+ com.character.creator.physicalAttributes.Race
+ com.character.creator.physicalAttributes.Race$1
+com/character/creator/dao/TalentsDao.java
+ com.character.creator.dao.TalentsDao
+com/character/creator/dao/NameDao.java
+ com.character.creator.dao.NameDao
+com/character/creator/backgroundAttributes/FamilyHistory.java
+ com.character.creator.backgroundAttributes.FamilyHistory
+com/character/creator/backgroundAttributes/Talents.java
+ com.character.creator.backgroundAttributes.Talents
+com/character/creator/CharacterCreator.java
+ com.character.creator.CharacterCreator
+com/character/creator/backgroundAttributes/Alignment.java
+ com.character.creator.backgroundAttributes.Alignment
 com/character/creator/Character.java
  com.character.creator.Character
+com/character/creator/backgroundAttributes/Flaws.java
+ com.character.creator.backgroundAttributes.Flaws
+com/character/creator/backgroundAttributes/BackgroundAttribute.java
+ com.character.creator.backgroundAttributes.BackgroundAttribute
+ com.character.creator.backgroundAttributes.BackgroundAttribute$BackgroundAttributeBuilder
+com/character/creator/dao/FlawsDao.java
+ com.character.creator.dao.FlawsDao

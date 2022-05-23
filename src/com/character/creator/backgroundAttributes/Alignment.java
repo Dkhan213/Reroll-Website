@@ -1,4 +1,4 @@
-package com.character.creator.BackgroundAttributes;
+package com.character.creator.backgroundAttributes;
 
 import java.util.Random;
 
@@ -13,8 +13,9 @@ public enum Alignment {
         NEUTRAL_EVIL,
         CHAOTIC_EVIL;
 
-    public static Alignment getRandomAlignment() {
+    public static String getRandomAlignment() {
         Random random = new Random();
-        return values()[random.nextInt(values().length)];
+        Alignment alignment = values()[random.nextInt(values().length)];
+        return alignment.toString();
     }
 }

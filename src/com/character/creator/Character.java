@@ -1,6 +1,6 @@
 package com.character.creator;
-import com.character.creator.BackgroundAttributes.BackgroundAttribute;
-import com.character.creator.PhysicalAttributes.PhysicalAttribute;
+import com.character.creator.backgroundAttributes.BackgroundAttribute;
+import com.character.creator.physicalAttributes.PhysicalAttribute;
 
 //ToDo: DynamoDb Mapping
 public class Character {
@@ -26,6 +26,13 @@ public class Character {
 
     public void setBackgroundAttribute(BackgroundAttribute backgroundAttribute) {
         this.backgroundAttribute = backgroundAttribute;
+    }
+
+    @Override
+    public String toString() {
+        return "Character: " + '\n' +
+                physicalAttribute + '\n' + '\n' +
+                backgroundAttribute;
     }
 
     public static Character createRandomCharacter() {

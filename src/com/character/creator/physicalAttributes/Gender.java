@@ -1,10 +1,10 @@
-package com.character.creator.PhysicalAttributes;
+package com.character.creator.physicalAttributes;
 
 import java.util.Random;
 
 public enum Gender {
-    Male,
-    Female;
+    MALE,
+    FEMALE;
 
     public static Gender getRandomGender() {
         Random random = new Random();

@@ -1,4 +1,4 @@
-package com.character.creator.PhysicalAttributes;
+package com.character.creator.physicalAttributes;
 
 import java.util.Random;
 

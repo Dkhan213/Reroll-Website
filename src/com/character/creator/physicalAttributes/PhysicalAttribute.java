@@ -1,16 +1,20 @@
-package com.character.creator.PhysicalAttributes;
+package com.character.creator.physicalAttributes;
+
+import com.character.creator.dao.NameDao;
 
 public class PhysicalAttribute {
+    private Name name;
     private Race race;
     private Gender gender;
     private SkinColor skin;
     private EyeColor eyeColor;
     private Hair hair;
     private int age;
-    private double height;
+    private String height;
     private double weight;
 
     public PhysicalAttribute(PhysicalAttributeBuilder builder) {
+        this.name = builder.name;
         this.race = builder.race;
         this.gender = builder.gender;
         this.skin = builder.skinColor;
@@ -21,16 +25,16 @@ public class PhysicalAttribute {
         this.weight = builder.weight;
     }
 
-    public Race getRace() {
-        return race;
+    public String getRace() {
+        return "Race: " + race.toString();
     }
 
     public void setRace(Race race) {
         this.race = race;
     }
 
-    public Gender getGender() {
-        return gender;
+    public String getGender() {
+        return "Gender: " + gender.toString();
     }
 
     public void setGender(Gender gender) {
@@ -69,11 +73,11 @@ public class PhysicalAttribute {
         this.age = age;
     }
 
-    public double getHeight() {
+    public String getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
@@ -83,6 +87,20 @@ public class PhysicalAttribute {
 
     public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public String toString() {
+        return "Physical Attribute: " + '\n'+
+                name + '\n' +
+                "Race = " + race.toString() + '\n' +
+                "Gender = " + gender.toString() + '\n' +
+                "Skin = " + skin.toString() + '\n' +
+                "Eye Color = " + eyeColor.toString() + '\n' +
+                hair + '\n' +
+                "Age = " + age + '\n' +
+                "Height = " + height + '\n'+
+                "Weight = " + weight + " lbs";
     }
 
     /**
@@ -96,13 +114,14 @@ public class PhysicalAttribute {
         EyeColor eyeColor = EyeColor.getRandomEyeColor();
         // Calculate age, height and weight based on gender and race
         int age = race.getRandomAge(race, gender);
-        double height = race.getRandomHeight(race, gender);
+        String height = race.getRandomHeight(race, gender);
         double weight = race.getRandomWeight(race, gender);
 //        Get random name and hair based on race and gender
-        String name = Name.getRandomName(race, gender);
+        Name name = NameDao.getRandomName(gender.toString());
         Hair hair = Hair.getRandomHair(race, gender);
 
         return PhysicalAttribute.builder()
+                .withName(name)
                 .withRace(race)
                 .withGender(gender)
                 .withSkinColor(skinColor)
@@ -119,14 +138,20 @@ public class PhysicalAttribute {
     }
 
     public static class PhysicalAttributeBuilder {
+        private Name name;
         private Race race;
         private Gender gender;
         private SkinColor skinColor;
         private EyeColor eyeColor;
         private Hair hair;
         private int age;
-        private double height;
+        private String height;
         private double weight;
+
+        public PhysicalAttributeBuilder withName(Name name) {
+            this.name = name;
+            return this;
+        }
 
         public PhysicalAttributeBuilder withRace(Race race) {
             this.race = race;
@@ -153,7 +178,7 @@ public class PhysicalAttribute {
             return this;
         }
 
-        public PhysicalAttributeBuilder withHeight(double height) {
+        public PhysicalAttributeBuilder withHeight(String height) {
             this.height = height;
             return this;
         }

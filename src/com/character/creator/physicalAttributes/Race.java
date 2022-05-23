@@ -1,4 +1,4 @@
-package com.character.creator.PhysicalAttributes;
+package com.character.creator.physicalAttributes;
 
 import java.util.Random;
 
@@ -18,7 +18,7 @@ public enum Race {
     //ToDo: Correct All Age, Weight, and Height values
     public int getRandomAge(Race race, Gender gender) {
         int max = 0;
-        if (gender == Gender.Female) {
+        if (gender == Gender.FEMALE) {
             switch (race) {
                 case HUMAN:
                     max = 90;
@@ -41,7 +41,7 @@ public enum Race {
             }
             int min = 18;
 
-            return new Random().nextInt((max - min + 1) + min);
+            return new Random().nextInt((max - min + 1)) + min;
         } else {
             switch (race) {
                 case HUMAN:
@@ -65,13 +65,13 @@ public enum Race {
             }
             int min = 18;
 
-            return new Random().nextInt((max - min + 1) + min);
+            return new Random().nextInt((max - min + 1)) + min;
         }
     }
 
-    public double getRandomHeight(Race race, Gender gender) {
+    public String getRandomHeight(Race race, Gender gender) {
         int max = 0;
-        if (gender == Gender.Female) {
+        if (gender == Gender.FEMALE) {
             switch (race) {
                 case HUMAN:
                     max = 90;
@@ -95,7 +95,11 @@ public enum Race {
             int min = 18;
 
             Random random = new Random();
-            return min + (max - min) * random.nextDouble();
+            double height = min + (max - min) * random.nextDouble();
+            int feet = (int)(height/12);
+            int inches = (int)(height % 12);
+            return feet + "'" + inches + '\"';
+
         } else {
             switch (race) {
                 case HUMAN:
@@ -120,13 +124,16 @@ public enum Race {
             int min = 18;
 
             Random random = new Random();
-            return min + (max - min) * random.nextDouble();
+            double height = min + (max - min) * random.nextDouble();
+            int feet = (int)(height/12);
+            int inches = (int)(height % 12);
+            return feet + "'" + inches + '\"';
         }
     }
 
     public double getRandomWeight(Race race, Gender gender) {
         int max = 0;
-        if (gender == Gender.Female) {
+        if (gender == Gender.FEMALE) {
             switch (race) {
                 case HUMAN:
                     max = 90;
@@ -150,7 +157,10 @@ public enum Race {
             int min = 18;
 
             Random random = new Random();
-            return min + (max - min) * random.nextDouble();
+            double weight = min + (max - min) * random.nextDouble();
+            weight = Math.round(weight * 100);
+            weight = weight/100;
+            return weight;
         } else {
             switch (race) {
                 case HUMAN:
@@ -175,7 +185,10 @@ public enum Race {
             int min = 18;
 
             Random random = new Random();
-            return min + (max - min) * random.nextDouble();
+            double weight = min + (max - min) * random.nextDouble();
+            weight = Math.round(weight * 100);
+            weight = weight/100;
+            return weight;
         }
     }
 }
